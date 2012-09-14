@@ -1,0 +1,4 @@
+crispy_forms
+south
+debug_toolbar
+djangorestframework
