@@ -3,10 +3,14 @@
 from django.forms.models import ModelForm
 from testapp.models import Person
 from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Div, Layout, Submit, Button, HTML
-from crispy_forms.bootstrap import FormActions
+from crispy_forms.layout import Div, Layout, Submit, Button, HTML, Field
+from crispy_forms.bootstrap import FormActions, PrependedText, AppendedText
 from django.core.urlresolvers import reverse
 
+# Custom django-crispy-forms bootstrap field
+class DateBootstrap(AppendedText):
+    def __init__(self, field):
+        super(DateBootstrap, self).__init__(field, '<i class="icon-th"></i>', template='date-crispy.html')
 
 class PersonForm(ModelForm):
     
@@ -14,11 +18,8 @@ class PersonForm(ModelForm):
     helper.form_tag = False
     helper.layout = Layout(
             'name',
-            'email',
-#            FormActions(
-#            HTML('<button type="submit" class="btn btn-primary">Save</button>'),
-#            HTML('<button href="/" class="btn">Cancel</button>'),
-#            )
+            DateBootstrap('date_of_birth'),
+            PrependedText('email', '<i class="icon-envelope"></i>'),
     )
     
     class Meta:
