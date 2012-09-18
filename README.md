@@ -18,13 +18,16 @@ Django project template that comes with the following batteries included:
 Run example App
 -----------
 
-* Install pip: sudo apt-get install pip
-* Install mysql interface to python: python-mysqldb
-* Install Django: sudo pip install django
+* Install pip: ``sudo apt-get install pip``
+* Install mysql interface to python: ``sudo apt-get python-mysqldb``
+* Install Django: ``sudo pip install django``
 * (Navigate to project folder) Download python plugins and libraries: ``pip install -r requirements.txt`` 
-* Create database for project (example mysql):
-```sudo mysql -u root -p
-CREATE DATABASE django_bootstrap_starter
-```
-* Create db tables``python manage.py syncdb``
-* Run! ``python manage.py runserver``
+* Create database for project:
+
+Example mysql	
+
+    sudo mysql -u root -p
+    CREATE DATABASE django_bootstrap_starter	
+
+* Create db tables ``python manage.py syncdb``
+* Run: ``python manage.py runserver``
