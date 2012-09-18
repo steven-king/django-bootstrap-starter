@@ -1,5 +1,21 @@
 {% extends "base.html" %}
 
+{% block javascript %}
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#people_table').dataTable( {
+		"sDom": "<'row'<'span6'l><'span0 ' f>r>t<'row'<'span6'i><'span6'p>>",
+		"bPaginate": false,
+		"bLengthChange": false,
+		"bFilter": true,
+		"bInfo": false,
+		"bAutoWidth": false,
+		
+	} );
+} );
+</script>
+{% endblock %}
+
 {% block page_header %}
 <h1>People</h1>
 {% endblock %}
@@ -9,7 +25,7 @@
 {% endblock %}
 
 {% block content %}
-<table class="table table-striped" name="datatable">
+<table class="table table-striped" id="people_table">
 	<thead>
 		<tr>
 			<th>Name</th>
