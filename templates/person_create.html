@@ -3,10 +3,8 @@
 {% load crispy_forms_tags %}
 
 {% block javascript %}
-<!-- <script type="text/javascript">
-	$('#hola').datepicker()
-</script> -->
-<!-- fix error messages not shown -->
+<!-- fix error messages not shown y prependes and appended bootstrap fields. 
+	This is a django-crispy-forms bug and has been resolved on their dev branch -->
 <style>
 .help-inline {
   font-size: 14px;
