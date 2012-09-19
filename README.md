@@ -19,21 +19,26 @@ Django project template that comes with the following batteries included:
 Run example App
 -----------
 
-1. Install pip package manager for python
- 
-        sudo apt-get install python-pip python-dev build-essential
+1. Install pip package manager for python and update it to the latest version:
+
+        sudo apt-get install python-pip
         sudo pip install --upgrade pip
 
-* Install Django: ``sudo pip install django``
+* (Navigate to project folder) To install django and plugins:
 
-* (Navigate to project folder) Download python plugins and libraries:
-	pip install -r requirements.txt 
+		pip install -r requirements.txt 
+
+* Probably there is an error with the package distribute(needed for djangorestframework) not being up to date:
+
+        pip install -U distribute
+        pip install -r requirements.txt	
 
 * Set up database (example for mysql):
 
-        sudo apt-get install mysql-client mysql-server python-mysqldb
+        sudo apt-get install mysql-server mysql-client python-mysqldb
         sudo mysql -u root -p
-        CREATE DATABASE django_bootstrap_starter	
+        CREATE DATABASE django_bootstrap_starter;	
 
 * Create db tables ``python manage.py syncdb``
 * Run: ``python manage.py runserver``
+
