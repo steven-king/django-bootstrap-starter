@@ -1,4 +1,4 @@
-crispy_forms
+django_crispy_forms
 south
 debug_toolbar
 djangorestframework
