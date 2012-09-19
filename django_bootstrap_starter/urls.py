@@ -11,9 +11,9 @@ from testapp.api import PersonResource
 
 urlpatterns = patterns('',
 
-    url(r'^$', generic.RedirectView.as_view(url='persons'), name='home' ),
+    url(r'^$', generic.RedirectView.as_view(url='people'), name='home' ),
     url(r'^person/add$', views.PersonCreate.as_view(), name='person_add'),
-    url(r'^persons$', views.PersonList.as_view(), name='person_list'),
+    url(r'^people$', views.PersonList.as_view(), name='person_list'),
 
     # RESTful Api
     url(r'^restframework', include('djangorestframework.urls', namespace='djangorestframework')),

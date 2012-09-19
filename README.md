@@ -24,21 +24,21 @@ Run example App
         sudo apt-get install python-pip
         sudo pip install --upgrade pip
 
-* (Navigate to project folder) To install django and plugins:
+2. (Navigate to project folder) To install django and plugins:
 
-		pip install -r requirements.txt 
+		sudo pip install -r requirements.txt 
 
-* Probably there is an error with the package distribute(needed for djangorestframework) not being up to date:
+3. Probably there is an error with the package distribute(needed for djangorestframework) not being up to date:
 
-        pip install -U distribute
-        pip install -r requirements.txt	
+        sudo pip install -U distribute
+        sudo pip install -r requirements.txt	
 
-* Set up database (example for mysql):
+4. Set up database (example for mysql):
 
         sudo apt-get install mysql-server mysql-client python-mysqldb
         sudo mysql -u root -p
         CREATE DATABASE django_bootstrap_starter;	
 
-* Create db tables ``python manage.py syncdb``
-* Run: ``python manage.py runserver``
+5. Create db tables ``python manage.py syncdb``
+6. Run: ``python manage.py runserver``
 
