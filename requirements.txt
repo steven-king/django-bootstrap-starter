@@ -1,6 +1,5 @@
 django
 django_crispy_forms
 south
-django_debug_toolbar
-distribute
+django_debug_toolbar 
 djangorestframework
